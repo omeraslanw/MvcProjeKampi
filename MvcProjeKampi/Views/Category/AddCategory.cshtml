@@ -1,0 +1,16 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<form class="form-group" method="post">
+    @*burada method türünü "post" olarak belirleyince bu formun içindeki işlemler
+        sadece sayfada bir post işlemi olunca -yani bir butona tıklandığında- çalışacak*@
+    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
+    <br />
+    <input type="text" placeholder="Kategori Açıklaması" name="CategoryDescription" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Yeni Kategori</button>
+</form>
