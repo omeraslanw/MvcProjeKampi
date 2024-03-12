@@ -22,13 +22,24 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = context.Entry(p);
+            deletedEntity.State = EntityState.Deleted;
+            //_object.Remove(p);
             context.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
+            //SingleOrDefault linq sorgusuyla tek bir değer döndürürüz(ID gibi)
         }
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            var addedEntity = context.Entry(p);
+            addedEntity.State = EntityState.Added;
+            //_object.Add(p);
+            //bu kısım 37 ve 38. satırlardaki kodların yerini tutuyordu ama güncelleme kısmında solid yapısına aykırı bazı durumlar oluşturduğu için kaldırdık.
             context.SaveChanges();
         }
 
@@ -44,6 +55,8 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
+            var updatedEntity = context.Entry(p);
+            updatedEntity.State = EntityState.Modified;
             context.SaveChanges();
         }
     }

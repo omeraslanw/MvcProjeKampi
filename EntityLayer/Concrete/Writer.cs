@@ -18,14 +18,22 @@ namespace EntityLayer.Concrete
         [StringLength(20)]
         public string WriterSurName { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriterImage { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
+        public string WriterAbout { get; set; }
+
+        [StringLength(100)]
         public string WriterMail { get; set; }
 
-        [StringLength(20)]
+        [StringLength(100)]
         public string WriterPassword { get; set; }
+
+        [StringLength(20)]
+        public string WriterTitle { get; set; }
+
+        public bool WriterStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
         //Burası bire çok ilişkinin çok kısmıdır

@@ -56,6 +56,8 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IImageFileDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -66,10 +68,48 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfImageFileDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202402201033474_mig1.cs" />
     <Compile Include="Migrations\202402201033474_mig1.designer.cs">
       <DependentUpon>202402201033474_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403091456417_mig_writer_edit.cs" />
+    <Compile Include="Migrations\202403091456417_mig_writer_edit.designer.cs">
+      <DependentUpon>202403091456417_mig_writer_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403091827471_mig_writertitle_add.cs" />
+    <Compile Include="Migrations\202403091827471_mig_writertitle_add.designer.cs">
+      <DependentUpon>202403091827471_mig_writertitle_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403102156445_mig_img_size.cs" />
+    <Compile Include="Migrations\202403102156445_mig_img_size.designer.cs">
+      <DependentUpon>202403102156445_mig_img_size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403102220500_mig_writer_addedstatus.cs" />
+    <Compile Include="Migrations\202403102220500_mig_writer_addedstatus.designer.cs">
+      <DependentUpon>202403102220500_mig_writer_addedstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403102326136_mig_content_addstaus.cs" />
+    <Compile Include="Migrations\202403102326136_mig_content_addstaus.designer.cs">
+      <DependentUpon>202403102326136_mig_content_addstaus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403102331192_mig_heading_addstatus.cs" />
+    <Compile Include="Migrations\202403102331192_mig_heading_addstatus.designer.cs">
+      <DependentUpon>202403102331192_mig_heading_addstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403120917157_mig_add_message_class.cs" />
+    <Compile Include="Migrations\202403120917157_mig_add_message_class.designer.cs">
+      <DependentUpon>202403120917157_mig_add_message_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403121925377_mig_add_contactDate.cs" />
+    <Compile Include="Migrations\202403121925377_mig_add_contactDate.designer.cs">
+      <DependentUpon>202403121925377_mig_add_contactDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403122027343_mig_add_imageFiles.cs" />
+    <Compile Include="Migrations\202403122027343_mig_add_imageFiles.designer.cs">
+      <DependentUpon>202403122027343_mig_add_imageFiles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +127,33 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202402201033474_mig1.resx">
       <DependentUpon>202402201033474_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403091456417_mig_writer_edit.resx">
+      <DependentUpon>202403091456417_mig_writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403091827471_mig_writertitle_add.resx">
+      <DependentUpon>202403091827471_mig_writertitle_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403102156445_mig_img_size.resx">
+      <DependentUpon>202403102156445_mig_img_size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403102220500_mig_writer_addedstatus.resx">
+      <DependentUpon>202403102220500_mig_writer_addedstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403102326136_mig_content_addstaus.resx">
+      <DependentUpon>202403102326136_mig_content_addstaus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403102331192_mig_heading_addstatus.resx">
+      <DependentUpon>202403102331192_mig_heading_addstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403120917157_mig_add_message_class.resx">
+      <DependentUpon>202403120917157_mig_add_message_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403121925377_mig_add_contactDate.resx">
+      <DependentUpon>202403121925377_mig_add_contactDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403122027343_mig_add_imageFiles.resx">
+      <DependentUpon>202403122027343_mig_add_imageFiles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
