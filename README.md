@@ -17,7 +17,7 @@ Bu proje, Ekşi Sözlük benzeri bir yapıda, kullanıcıların çeşitli başl�
 - **Üyelik Sistemi:** Kullanıcı kaydı, girişi ve profil yönetimi.
 - **Başlık Yönetimi:** Yeni başlık açma, mevcut başlıkları arama ve listeleme.
 - **Entry Yönetimi:** Başlıklar altına yeni entry girme, kendi entry'lerini düzenleme.
-- **Oylama:** Entry'leri beğenme (şükela) veya beğenmeme.
+- **Mesajlaşma:** Adminler ve diğer kullanıcılar ile mesajlaşma .
 - **Sayfalama:** Başlıklardaki entry'lerin sayfalar halinde gösterimi.
 
 ### Admin Paneli Özellikleri
@@ -25,6 +25,7 @@ Bu proje, Ekşi Sözlük benzeri bir yapıda, kullanıcıların çeşitli başl�
 - **İçerik Yönetimi:** Başlıkları veya entry'leri silme, uygunsuz içeriği denetleme.
 - **Kategori Yönetimi:** Başlıkları kategorize etmek için kategori ekleme/silme/düzenleme.
 - **Dashboard:** Siteyle ilgili temel istatistikleri (toplam yazar, başlık, entry sayısı vb.) görüntüleme.
+- **Mesajlaşma:** Adminler ve diğer kullanıcılar ile mesajlaşma .
 
 ## Kullanılan Teknolojiler
 
@@ -96,3 +97,8 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 ![Resim Detayı](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-03-13%20002013.png?raw=true)
 ![404](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-03-13%20002036.png?raw=true)
 ![SQL](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-03-13%20002459.png?raw=true)
+![Admin](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/admingiris.png)
+![Yazar](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/yazargirisi.png)
+![raporlama](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/raporlama.png)
+![landingpage](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/landingpage.png)
+![yetkilendirme](https://github.com/omeraslanw/MvcProjeKampi/blob/master/Proje/yetkilendirme.png)
