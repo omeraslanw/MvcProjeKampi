@@ -61,7 +61,7 @@ namespace MvcProjeKampi.Controllers
             if (result.IsValid)
             {
                 manager.WriterUpdate(writer);
-                return RedirectToAction("Index");
+                return RedirectToAction("MyHeading", "WriterPanel");
             }
             else
             {

@@ -18,6 +18,15 @@
         @Html.DropDownListFor(x => x.WriterID, (List<SelectListItem>)ViewBag.writer, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.WriterID)
         <br />
-        <button class="btn btn-info">Başlığı Ekle</button>
+        <button id="btn" class="btn btn-info">Başlığı Ekle</button>
     </div>
 }
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    Swal.fire({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success"
+    });
+</script>

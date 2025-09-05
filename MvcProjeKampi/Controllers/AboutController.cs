@@ -12,6 +12,7 @@ namespace MvcProjeKampi.Controllers
     public class AboutController : Controller
     {
         AboutManager aboutManager = new AboutManager(new EfAboutDal());
+
         public ActionResult Index()
         {
             var aboutValues = aboutManager.GetList();
@@ -34,6 +35,23 @@ namespace MvcProjeKampi.Controllers
         public PartialViewResult AboutPartial()
         {
             return PartialView();
+        }
+
+        public ActionResult UpdateAbout(int id)
+        {
+            var aboutValue = aboutManager.GetByID(id);
+            switch (aboutValue.AboutStatus)
+            {
+                case true:
+                    aboutValue.AboutStatus = false;
+                    break;
+                case false:
+                    aboutValue.AboutStatus = true;
+                    break;
+
+            }
+            aboutManager.AboutUpdate(aboutValue);
+            return RedirectToAction("Index");
         }
     }
 }

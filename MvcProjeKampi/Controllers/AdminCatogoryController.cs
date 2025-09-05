@@ -14,16 +14,20 @@ namespace MvcProjeKampi.Controllers
     public class AdminCatogoryController : Controller
     {
         CategoryManager manager = new CategoryManager(new EfCategoryDal());
+
+        [Authorize(Roles = "B")]
         public ActionResult Index()
         {
             var categoryValues = manager.GetList();
             return View(categoryValues);
         }
+
         [HttpGet]
         public ActionResult AddCategory()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {

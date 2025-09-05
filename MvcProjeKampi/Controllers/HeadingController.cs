@@ -14,10 +14,23 @@ namespace MvcProjeKampi.Controllers
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
+
         public ActionResult Index()
         {
             var heading = headingManager.GetList();
             return View(heading);
+        }
+
+        public ActionResult HeadingByWriter(int id)
+        {
+            var headingValues = headingManager.GetByID(id);
+            return View(headingValues);
+        }
+
+        public ActionResult HeadingReport()
+        {
+            var headingValues = headingManager.GetList();
+            return View(headingValues);
         }
 
         [HttpGet]

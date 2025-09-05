@@ -3,25 +3,38 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@{
+    string color = "";
+    string button = "";
+}
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
             <th>Hakkımda Başlığı</th>
-            <th>Aktif Yap</th>
-            <th>Pasif Yap</th>
+            <th>Hakkımda Durumu</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var about in Model)
         {
+            switch (about.AboutStatus)
+            {
+                case true:
+                    color = "success";
+                    button = "Pasif Yap";
+                    break;
+                case false:
+                    color = "danger";
+                    button = "Aktif Yap";
+                    break;
+            }
             <tr>
                 <td>@about.AboutID</td>
-                <td>Başlık</td>
-                <td><a href="#" class="btn btn-warning">Aktif Yap</a></td>
-                <td><a href="#" class="btn btn-danger">Pasif Yap</a></td>
+                <td>@about.AboutDetails1</td>
+                <td><a href="/About/UpdateAbout/@about.AboutID" class="btn btn-@color">@button</a></td>
             </tr>
         }
     </tbody>
 </table>
-@Html.Action("AboutPartial","About")
+@Html.Action("AboutPartial", "About")
